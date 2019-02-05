@@ -101,6 +101,48 @@ describe('Especificaciones del juego SpockGame:', () => {
       });
     });
 
+    describe('Gana el jugador 2 cuando:', () => {
+      it('el jugador 1 elige "piedra" y el jugador 2 elige "papel"', () => {
+        game.play(Game.OPTIONS.ROCK, Game.OPTIONS.PAPER);
+        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+      });
+      it('el jugador 1 elige "papel" y el jugador 2 elige "tijeras"', () => {
+        game.play(Game.OPTIONS.PAPER, Game.OPTIONS.SCISSORS);
+        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+      });
+      it('el jugador 1 elige "tijeras" y el jugador 2 elige "piedra"', () => {
+        game.play(Game.OPTIONS.SCISSORS, Game.OPTIONS.ROCK);
+        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+      });
+      it('el jugador 1 elige "piedra" y el jugador 2 elige "spock"', () => {
+        game.play(Game.OPTIONS.ROCK, Game.OPTIONS.SPOCK);
+        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+      });
+      it('el jugador 1 elige "papel" y el jugador 2 elige "lagarto"', () => {
+        game.play(Game.OPTIONS.PAPER, Game.OPTIONS.LIZARD);
+        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+      });
+      it('el jugador 1 elige "tijeras" y el jugador 2 elige "spock"', () => {
+        game.play(Game.OPTIONS.SCISSORS, Game.OPTIONS.SPOCK);
+        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+      });
+      it('el jugador 1 elige "lagarto" y el jugador 2 elige "piedra"', () => {
+        game.play(Game.OPTIONS.LIZARD, Game.OPTIONS.ROCK);
+        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+      });
+      it('el jugador 1 elige "lagarto" y el jugador 2 elige "tijeras"', () => {
+        game.play(Game.OPTIONS.ROCK, Game.OPTIONS.SPOCK);
+        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+      });
+      it('el jugador 1 elige "spock" y el jugador 2 elige "papel"', () => {
+        game.play(Game.OPTIONS.ROCK, Game.OPTIONS.SPOCK);
+        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+      });
+      it('el jugador 1 elige "spock" y el jugador 2 elige "lagarto"', () => {
+        game.play(Game.OPTIONS.ROCK, Game.OPTIONS.SPOCK);
+        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+      });
+    });
 
   });
 });
