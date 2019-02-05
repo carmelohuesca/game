@@ -30,10 +30,16 @@ describe('Especificaciones del juego SpockGame:', () => {
     expect(Game.OPTIONS.SPOCK).toBeDefined();
   });
 
+  it('el juego tiene tres resultados (empate, ganador 1, ganador 2)', () => {
+    expect(Game.RESULTS).toBeDefined();
+    expect(Game.RESULTS.DRAW).toBeDefined();
+    expect(Game.RESULTS.WINNER_ONE).toBeDefined();
+    expect(Game.RESULTS.WINNER_TWO).toBeDefined();
+  });
+
 });
 
-  // it('el juego tiene tres resultados (empate, ganador 1, ganador 2)', () => {
-  // });
+
   // it('se incrementa el número de ronda en cada de tirada', () => {
   // });
 

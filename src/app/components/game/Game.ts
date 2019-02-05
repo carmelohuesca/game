@@ -8,6 +8,12 @@ export class Game {
     SPOCK: 'SPOCK'
   };
 
+  static RESULTS = {
+    DRAW: 'DRAW',
+    WINNER_ONE: 'WINNER_ONE',
+    WINNER_TWO: 'WINNER_TWO'
+  };
+
   playerOne: string;
   playerTwo: string;
 
