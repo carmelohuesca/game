@@ -16,9 +16,16 @@ export class Game {
 
   playerOne: string;
   playerTwo: string;
+  round: number;
 
   constructor(playerOne: string, playerTwo: string) {
     this.playerOne = playerOne;
     this.playerTwo = playerTwo;
+    this.round = 0;
   }
+
+  play(): any {
+    this.round++;
+  }
+
 }

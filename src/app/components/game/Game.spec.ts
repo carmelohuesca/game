@@ -37,11 +37,20 @@ describe('Especificaciones del juego SpockGame:', () => {
     expect(Game.RESULTS.WINNER_TWO).toBeDefined();
   });
 
+  it('se incrementa el número de ronda en cada de tirada', () => {
+    expect(game.round).toBeDefined();
+    expect(game.play).toBeDefined();
+    expect(game.round).toBe(0);
+    game.play();
+    expect(game.round).toBe(1);
+    game.play();
+    game.play();
+    game.play();
+    expect(game.round).toBe(4);
+  });
 });
 
 
-  // it('se incrementa el número de ronda en cada de tirada', () => {
-  // });
 
 
 
