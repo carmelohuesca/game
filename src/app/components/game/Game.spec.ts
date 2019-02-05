@@ -41,17 +41,22 @@ describe('Especificaciones del juego SpockGame:', () => {
     expect(game.round).toBeDefined();
     expect(game.play).toBeDefined();
     expect(game.round).toBe(0);
-    game.play();
+    game.play(Game.OPTIONS.ROCK, Game.OPTIONS.ROCK);
     expect(game.round).toBe(1);
-    game.play();
-    game.play();
-    game.play();
+    game.play(Game.OPTIONS.ROCK, Game.OPTIONS.ROCK);
+    game.play(Game.OPTIONS.ROCK, Game.OPTIONS.ROCK);
+    game.play(Game.OPTIONS.ROCK, Game.OPTIONS.ROCK);
     expect(game.round).toBe(4);
   });
+
+  describe('El resultado', () => {
+    it('empatan cuando los dos jugadores eligen la misma opción', () => {
+      expect(game.result).toBeDefined();
+      game.play(Game.OPTIONS.ROCK, Game.OPTIONS.ROCK);
+      game.play(Game.OPTIONS.ROCK, Game.OPTIONS.PAPER);
+      expect(game.result).not.toBe(Game.RESULTS.DRAW);
+    });
+
+  });
 });
-
-
-
-
-
 

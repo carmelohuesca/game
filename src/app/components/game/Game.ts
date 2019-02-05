@@ -17,14 +17,21 @@ export class Game {
   playerOne: string;
   playerTwo: string;
   round: number;
+  result: string;
 
   constructor(playerOne: string, playerTwo: string) {
     this.playerOne = playerOne;
     this.playerTwo = playerTwo;
     this.round = 0;
+    this.result = Game.RESULTS.DRAW;
   }
 
-  play(): any {
+  play(optionOne: string, optionTwo: string) {
+    if (optionOne === optionTwo) {
+      this.result = Game.RESULTS.DRAW;
+    } else {
+      this.result = '';
+    }
     this.round++;
   }
 

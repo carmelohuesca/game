@@ -3,3 +3,4 @@ Especificaciones del juego SpockGame:
 ✔ el juego tiene cinco opciones iniciales (piedra, papel, tijera, lagarto, spock) @done(19-02-05 16:01)
 ✔ el juego tiene tres resultados (empate, ganador 1, ganador 2) @done(19-02-05 16:08)
 ✔ se incrementa el número de ronda en cada de tirada @done(19-02-05 16:17)
+✔ Empatan cuando los dos jugadores eligen la misma opción @done(19-02-05 16:36)
