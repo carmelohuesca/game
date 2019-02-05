@@ -30,7 +30,7 @@ export class Game {
     if (optionOne === optionTwo) {
       this.result = Game.RESULTS.DRAW;
     } else {
-      this.result = '';
+      this.result = Game.RESULTS.WINNER_ONE;
     }
     this.round++;
   }
