@@ -1,4 +1,13 @@
 export class Game {
+
+  static OPTIONS = {
+    ROCK: 'ROCK',
+    PAPER: 'PAPER',
+    SCISSORS: 'SCISSORS',
+    LIZARD: 'LIZARD',
+    SPOCK: 'SPOCK'
+  };
+
   playerOne: string;
   playerTwo: string;
 

@@ -21,11 +21,17 @@ describe('Especificaciones del juego SpockGame:', () => {
     expect(game.playerTwo).toBe(PLAYER_TWO);
   });
 
+  it('el juego tiene cinco opciones iniciales (piedra, papel, tijera, lagarto, spock)', () => {
+    expect(Game.OPTIONS).toBeDefined();
+    expect(Game.OPTIONS.ROCK).toBeDefined();
+    expect(Game.OPTIONS.PAPER).toBeDefined();
+    expect(Game.OPTIONS.SCISSORS).toBeDefined();
+    expect(Game.OPTIONS.LIZARD).toBeDefined();
+    expect(Game.OPTIONS.SPOCK).toBeDefined();
+  });
 
 });
 
-  // it('el juego tiene cinco opciones iniciales (piedra, papel, tijera, lagarto, spock)', () => {
-  // });
   // it('el juego tiene tres resultados (empate, ganador 1, ganador 2)', () => {
   // });
   // it('se incrementa el número de ronda en cada de tirada', () => {
