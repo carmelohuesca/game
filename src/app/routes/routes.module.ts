@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GameModule } from './game/game.module';
 import { TimeExampleModule } from './time-example/time-example.module';
+import { SpockResolutionModule } from './spock-resolution/spock-resolution.module';
 
 const ROUTE_MODULES = [
   GameModule,
+  SpockResolutionModule,
   TimeExampleModule
 ];
 

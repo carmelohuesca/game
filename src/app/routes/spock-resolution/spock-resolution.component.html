@@ -1,0 +1,56 @@
+<div>
+
+    <div *ngIf="instructions">
+        <img src="assets/img/instrucciones.png" alt="">
+    </div>
+    <h1>Elige el jugador</h1>
+    <div class="persons">
+        <span>
+      <img class="player" [ngClass]="{'turn':playerOne==='HOWARD' || playerTwo==='HOWARD'}" (click)="selectPlayer('HOWARD')"
+        src="assets/img/personajes/howard.png" alt="">
+      <div class="score" *ngIf="score">{{score.HOWARD}}</div>
+    </span>
+        <span>
+      <img class="player" [ngClass]="{'turn':playerOne==='LEONARD' || playerTwo==='LEONARD'}" (click)="selectPlayer('LEONARD')"
+        src="assets/img/personajes/leonard.png" alt="">
+      <div class="score" *ngIf="score">{{score.LEONARD}}</div>
+    </span>
+        <span>
+      <img class="player" [ngClass]="{'turn':playerOne==='PENNY' || playerTwo==='PENNY'}" (click)="selectPlayer('PENNY')"
+        src="assets/img/personajes/penny.png" alt="">
+      <div class="score" *ngIf="score">{{score.PENNY}}</div>
+    </span>
+        <span>
+      <img class="player" [ngClass]="{'turn':playerOne==='RAJ' || playerTwo==='RAJ'}" (click)="selectPlayer('RAJ')" src="assets/img/personajes/raj.png"
+        alt="">
+      <div class="score" *ngIf="score">{{score.RAJ}}</div>
+    </span>
+        <span>
+      <img class="player" [ngClass]="{'turn':playerOne==='SHELDON' || playerTwo==='SHELDON'}" (click)="selectPlayer('SHELDON')"
+        src="assets/img/personajes/sheldon.png" alt="">
+      <div class="score" *ngIf="score">{{score.SHELDON}}</div>
+    </span>
+    </div>
+    <div class="game" *ngIf="false">
+        <!-- <img class="player" [ngClass]="{'turn':!turn}" *ngIf="playerOne" src="assets/img/personajes/{{playerOne.toLowerCase()}}.png" alt=""> -->
+        <!-- <img class="player" [ngClass]="{'turn':turn}" *ngIf="playerTwo" src="assets/img/personajes/{{playerTwo.toLowerCase()}}.png" alt=""> -->
+        <div class="choices">
+            <span class="choice">
+        <img src="assets/img/opciones/piedra.png" alt="">
+      </span>
+            <span class="choice">
+        <img src="assets/img/opciones/papel.png" alt="">
+      </span>
+            <span class="choice">
+        <img src="assets/img/opciones/tijeras.png" alt="">
+      </span> <span class="choice">
+        <img src="assets/img/opciones/lagarto.png" alt="">
+      </span> <span class="choice">
+        <img src="assets/img/opciones/spock.png" alt="">
+      </span>
+        </div>
+    </div>
+
+
+
+</div>

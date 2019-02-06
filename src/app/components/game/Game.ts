@@ -31,7 +31,7 @@ export class Game {
     if (optionOne === optionTwo) {
       this.result = Game.RESULTS.DRAW;
     } else {
-      this.result = Game.WINNING_OPTIONS_ONE[optionOne].includes(optionTwo) ? Game.RESULTS.WINNER_ONE : Game.RESULTS.WINNER_TWO;
+      this.result = Game.WINNING_OPTIONS_ONE[optionOne].includes(optionTwo) ? this.playerOne : this.playerTwo;
     }
   }
 

@@ -33,8 +33,8 @@ describe('Especificaciones del juego SpockGame:', () => {
   it('el juego tiene tres resultados (empate, ganador 1, ganador 2)', () => {
     expect(Game.RESULTS).toBeDefined();
     expect(Game.RESULTS.DRAW).toBeDefined();
-    expect(Game.RESULTS.WINNER_ONE).toBeDefined();
-    expect(Game.RESULTS.WINNER_TWO).toBeDefined();
+    // expect(PLAYER_ONE).toBeDefined();
+    // expect(PLAYER_TWO).toBeDefined();
   });
 
   it('se incrementa el número de ronda en cada de tirada', () => {
@@ -61,86 +61,86 @@ describe('Especificaciones del juego SpockGame:', () => {
 
       it('el jugador 1 elige "piedra" y el jugador 2 elige "tijeras"', () => {
         game.play(Game.OPTIONS.ROCK, Game.OPTIONS.SCISSORS);
-        expect(game.result).toBe(Game.RESULTS.WINNER_ONE);
+        expect(game.result).toBe(PLAYER_ONE);
       });
       it('el jugador 1 elige "papel" y el jugador 2 elige "piedra"', () => {
         game.play(Game.OPTIONS.PAPER, Game.OPTIONS.ROCK);
-        expect(game.result).toBe(Game.RESULTS.WINNER_ONE);
+        expect(game.result).toBe(PLAYER_ONE);
       });
       it('el jugador 1 elige "tijeras" y el jugador 2 elige "papel"', () => {
         game.play(Game.OPTIONS.SCISSORS, Game.OPTIONS.PAPER);
-        expect(game.result).toBe(Game.RESULTS.WINNER_ONE);
+        expect(game.result).toBe(PLAYER_ONE);
       });
       it('el jugador 1 elige "piedra" y el jugador 2 elige "lagarto"', () => {
         game.play(Game.OPTIONS.ROCK, Game.OPTIONS.LIZARD);
-        expect(game.result).toBe(Game.RESULTS.WINNER_ONE);
+        expect(game.result).toBe(PLAYER_ONE);
       });
       it('el jugador 1 elige "papel" y el jugador 2 elige "spock"', () => {
         game.play(Game.OPTIONS.PAPER, Game.OPTIONS.SPOCK);
-        expect(game.result).toBe(Game.RESULTS.WINNER_ONE);
+        expect(game.result).toBe(PLAYER_ONE);
       });
       it('el jugador 1 elige "tijeras" y el jugador 2 elige "lagarto"', () => {
         game.play(Game.OPTIONS.SCISSORS, Game.OPTIONS.LIZARD);
-        expect(game.result).toBe(Game.RESULTS.WINNER_ONE);
+        expect(game.result).toBe(PLAYER_ONE);
       });
       it('el jugador 1 elige "lagarto" y el jugador 2 elige "spock"', () => {
         game.play(Game.OPTIONS.LIZARD, Game.OPTIONS.SPOCK);
-        expect(game.result).toBe(Game.RESULTS.WINNER_ONE);
+        expect(game.result).toBe(PLAYER_ONE);
       });
       it('el jugador 1 elige "lagarto" y el jugador 2 elige "papel"', () => {
         game.play(Game.OPTIONS.LIZARD, Game.OPTIONS.PAPER);
-        expect(game.result).toBe(Game.RESULTS.WINNER_ONE);
+        expect(game.result).toBe(PLAYER_ONE);
       });
       it('el jugador 1 elige "spock" y el jugador 2 elige "piedra"', () => {
         game.play(Game.OPTIONS.SPOCK, Game.OPTIONS.ROCK);
-        expect(game.result).toBe(Game.RESULTS.WINNER_ONE);
+        expect(game.result).toBe(PLAYER_ONE);
       });
       it('el jugador 1 elige "spock" y el jugador 2 elige "tijeras"', () => {
         game.play(Game.OPTIONS.SPOCK, Game.OPTIONS.SCISSORS);
-        expect(game.result).toBe(Game.RESULTS.WINNER_ONE);
+        expect(game.result).toBe(PLAYER_ONE);
       });
     });
 
     describe('Gana el jugador 2 cuando:', () => {
       it('el jugador 1 elige "piedra" y el jugador 2 elige "papel"', () => {
         game.play(Game.OPTIONS.ROCK, Game.OPTIONS.PAPER);
-        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+        expect(game.result).toBe(PLAYER_TWO);
       });
       it('el jugador 1 elige "papel" y el jugador 2 elige "tijeras"', () => {
         game.play(Game.OPTIONS.PAPER, Game.OPTIONS.SCISSORS);
-        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+        expect(game.result).toBe(PLAYER_TWO);
       });
       it('el jugador 1 elige "tijeras" y el jugador 2 elige "piedra"', () => {
         game.play(Game.OPTIONS.SCISSORS, Game.OPTIONS.ROCK);
-        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+        expect(game.result).toBe(PLAYER_TWO);
       });
       it('el jugador 1 elige "piedra" y el jugador 2 elige "spock"', () => {
         game.play(Game.OPTIONS.ROCK, Game.OPTIONS.SPOCK);
-        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+        expect(game.result).toBe(PLAYER_TWO);
       });
       it('el jugador 1 elige "papel" y el jugador 2 elige "lagarto"', () => {
         game.play(Game.OPTIONS.PAPER, Game.OPTIONS.LIZARD);
-        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+        expect(game.result).toBe(PLAYER_TWO);
       });
       it('el jugador 1 elige "tijeras" y el jugador 2 elige "spock"', () => {
         game.play(Game.OPTIONS.SCISSORS, Game.OPTIONS.SPOCK);
-        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+        expect(game.result).toBe(PLAYER_TWO);
       });
       it('el jugador 1 elige "lagarto" y el jugador 2 elige "piedra"', () => {
         game.play(Game.OPTIONS.LIZARD, Game.OPTIONS.ROCK);
-        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+        expect(game.result).toBe(PLAYER_TWO);
       });
       it('el jugador 1 elige "lagarto" y el jugador 2 elige "tijeras"', () => {
         game.play(Game.OPTIONS.ROCK, Game.OPTIONS.SPOCK);
-        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+        expect(game.result).toBe(PLAYER_TWO);
       });
       it('el jugador 1 elige "spock" y el jugador 2 elige "papel"', () => {
         game.play(Game.OPTIONS.ROCK, Game.OPTIONS.SPOCK);
-        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+        expect(game.result).toBe(PLAYER_TWO);
       });
       it('el jugador 1 elige "spock" y el jugador 2 elige "lagarto"', () => {
         game.play(Game.OPTIONS.ROCK, Game.OPTIONS.SPOCK);
-        expect(game.result).toBe(Game.RESULTS.WINNER_TWO);
+        expect(game.result).toBe(PLAYER_TWO);
       });
     });
 
