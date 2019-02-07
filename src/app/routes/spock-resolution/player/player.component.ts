@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-player',
@@ -8,6 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PlayerComponent implements OnInit {
   @Input() player: string;
   @Input() score: any;
+  @Input() isSelected: boolean;
+
+  @Output() clicked: EventEmitter<string> = new EventEmitter();
 
   src: string;
 
@@ -17,6 +20,10 @@ export class PlayerComponent implements OnInit {
     this.src = 'assets/img/personajes/' + this.player.toLowerCase() + '.png';
   }
 
+  doClick(ev: any) {
+    console.log(ev);
+    this.clicked.emit(this.player);
+  }
 
 
 }

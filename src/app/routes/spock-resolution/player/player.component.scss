@@ -13,3 +13,10 @@
   margin-left: -180px;
   color: white;
 }
+
+.turn {
+  opacity: 1;
+  border: 2px dashed lightgrey;
+  transition: all .2s ease-in-out;
+  filter: grayscale(0);
+}

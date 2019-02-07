@@ -101,4 +101,6 @@ export class SpockResolutionComponent extends Game implements OnInit {
     this.turn = !this.turn;
   }
 
+
+
 }

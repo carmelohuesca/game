@@ -1,4 +1,4 @@
-<span *ngIf="player">
-  <img class="player" [src]="src" alt="">
+<span *ngIf="player" (click)="doClick($event)">
+  <img class="player" [src]="src" alt="" [ngClass]="{'turn': isSelected}">
   <div class="score" *ngIf="score">{{score[player]}}</div>
 </span>
