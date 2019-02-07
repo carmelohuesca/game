@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { Game } from '../../components/game/Game';
+import { Game } from './Game';
 const KEY_CODE = {
   ENTER: 13,
   R: 82,

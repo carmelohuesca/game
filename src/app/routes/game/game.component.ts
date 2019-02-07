@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Game } from '../../components/game/Game';
+import { Game } from '../spock-resolution/Game';
 
 @Component({
   selector: 'app-game',
